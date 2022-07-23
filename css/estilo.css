@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/*aninhamento*/
+#conteudo {
+  background: green;
+  padding: 15px;
+}
+#conteudo h1 {
+  color: blue;
+}
+#conteudo a {
+  color: red;
+  text-decoration: none;
+}
+
+/*referencia de seletor pai */
+#conteudo2 {
+  background: red;
+  padding: 15px;
+}
+#conteudo2 h1 {
+  color: blue;
+}
+#conteudo2 a {
+  color: blue;
+  text-decoration: none;
+}
+#conteudo2 a:hover {
+  color: yellow;
+}
+
+/*variaveis*/
+h2 {
+  color: yellow;
+}
+
+/*escopo variaveis*/
+#rodape {
+  padding: 15px;
+  background-color: green;
+}
+
+p {
+  color: orange;
+}
+
+/*interpolação*/
+.red {
+  color: red;
+}
+
+/* for */
+/* throught e to */
+.item1 {
+  background: green;
+}
+
+.item2 {
+  background: green;
+}
+
+.item3 {
+  background: green;
+}
+
+/* while */
+.item1 {
+  background: orange;
+}
+
+.item2 {
+  background: orange;
+}
+
+.item3 {
+  background: orange;
+}
+
+.item4 {
+  background: orange;
+}
+
+/* each */
+.item1 {
+  background: green;
+}
+
+.item2 {
+  background: red;
+}
+
+.item3 {
+  background: yellow;
+}
+
+/* funçôes */
+.col-1 {
+  width: 8.3333333333%;
+  background: green;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  background: green;
+}
+
+.col-3 {
+  width: 25%;
+  background: green;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  background: green;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  background: green;
+}
+
+.col-6 {
+  width: 50%;
+  background: green;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  background: green;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  background: green;
+}
+
+.col-9 {
+  width: 75%;
+  background: green;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  background: green;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  background: green;
+}
+
+.col-12 {
+  width: 100%;
+  background: green;
+}
+
+/* importações */
+/* mixins */
+.mixing {
+  color: white;
+  background: black;
+  padding: 10px 5px;
+}
+
+/*herança*/
+.classe1, .vermelho {
+  color: red;
+}
+
+.classe2, .vermelho {
+  background: black;
+}
+
+/* herança com multiplas diretivas */
+/* placeholder */
+.erro {
+  color: black;
+}
+
+.erro {
+  background: blue;
+}
+
+.erro {
+  padding: 5px;
+}
+
+/*diretivas de controle */
+.diretivas {
+  color: black;
+}
+
+/*# sourceMappingURL=estilo.css.map */
