@@ -1,0 +1,182 @@
+/*aninhamento*/
+#conteudo{
+    background:green;
+    padding:15px;
+    
+    h1{
+        color:blue;
+    }
+    
+    a{
+        color:red;
+        text-decoration:none;
+    }
+}
+
+
+/*referencia de seletor pai */
+
+#conteudo2{
+    background:red;
+    padding:15px;
+    
+    h1{
+        color:blue;
+    }
+    
+    a{
+        color:blue;
+        text-decoration:none;
+        
+        &:hover{
+        color:yellow;
+        
+        }
+    }
+    
+}
+
+/*variaveis*/
+$variavel: red;
+$corTitulo: yellow;
+$tamanhoTitulo: 20px;
+
+h2{
+    color:$corTitulo;
+}
+
+
+/*escopo variaveis*/
+$corPadrao: orange;
+
+#rodape{
+    padding:15px;
+    
+    $corPadrao: green;
+    background-color:$corPadrao;
+}
+
+p{
+    color:$corPadrao;
+}
+
+/*interpolação*/
+$classe: red;
+$color: color;
+
+.red{
+    #{color}: $classe;
+}
+
+
+/* for */
+
+/* throught e to */
+
+@for $i from 1 through 3 {
+    .item#{$i}{
+        background:green;
+    }
+}
+
+/* while */
+
+$contador: 1;
+
+@while $contador < 5 {
+    .item#{$contador}{
+        background:orange;
+    }
+    
+    $contador: $contador +1;
+}
+
+/* each */
+
+$lista: green, red, yellow;
+$contador: 1;
+@each $cor in $lista{
+    .item#{$contador}{
+        background: $cor;
+    }
+    $contador: $contador + 1
+}
+
+/* funçôes */
+$total: 12;
+@function larguraColuna($coluna){
+    @return percentage(calc($coluna/$total))
+}
+
+@for $i from 1 through $total{
+    .col-#{$i}{
+        width: larguraColuna($i);
+        background:green;
+    }
+}
+
+/* importações */
+@import "variaveis.scss";
+
+/* mixins */
+
+@mixin titulo($cor,$cor-bg) {
+    color: $cor;
+    background: $cor-bg;
+    padding: 10px 5px;
+}
+
+.mixing{
+    
+    @include titulo(white,black);
+}
+
+/*herança*/
+
+
+.classe1{
+    color: red;
+}
+
+.classe2{
+    background: black;
+}
+
+.vermelho{
+    @extend .classe1;
+    @extend .classe2;
+}
+
+/* herança com multiplas diretivas */
+/* placeholder */
+%erro1{
+    color: black;
+}
+
+%erro2{
+    @extend %erro1;
+    background: blue;
+}
+
+.erro{
+    @extend %erro2;
+    padding: 5px;
+}
+
+/*diretivas de controle */
+$cor: balck;
+@if($cor == green){
+    .diretivas{
+        color: $cor;
+    }
+}@else if( $cor == red){
+    .diretivas{
+        color: $cor;
+    }
+}@else{
+    .diretivas{
+        color: black
+    }
+}
+
+
